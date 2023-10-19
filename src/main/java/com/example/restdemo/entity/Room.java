@@ -10,12 +10,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Camera {
+public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int roomID;
     private String name;
-    private String resolution;
-
-
+    private double area;
 }

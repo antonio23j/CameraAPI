@@ -1,7 +1,7 @@
 package com.example.restdemo.service;
 
 import com.example.restdemo.entity.Camera;
-import com.example.restdemo.repository.Repository;
+import com.example.restdemo.repository.CameraRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,10 +10,10 @@ import java.util.Optional;
 
 @org.springframework.stereotype.Service
 @Slf4j
-public class Service {
+public class CameraService {
 
     @Autowired
-    Repository repo;
+    CameraRepository repo;
     public List<Camera> getCameras(){
         return (List<Camera>) repo.findAll();
     }

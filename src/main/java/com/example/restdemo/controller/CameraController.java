@@ -1,18 +1,19 @@
 package com.example.restdemo.controller;
 
 import com.example.restdemo.entity.Camera;
-import com.example.restdemo.service.Service;
+import com.example.restdemo.service.CameraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
+@RequestMapping("camera")
 @RestController
-public class Controller {
+public class CameraController {
 
     @Autowired
-    Service service;
+    CameraService service;
 
     @GetMapping
     public List<Camera> getCameras(){
